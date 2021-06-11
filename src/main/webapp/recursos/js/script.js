@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 function add(){
 alert("registrar");
-var datos = {"nomrol":$("#nomrol").val(), "opc": 1};
+var datos = {"no":$("#n").val(), "te":$("#t").val(), "co":$("#c").val(), "opc":1};
 $.ajax({
 		beforeSend: function(){
 			$('#resultado').html('Esperando...!');
@@ -19,6 +19,28 @@ $.ajax({
 				$('#resultado').html("<div class='alert alert-danger' role='alert'>Erro al guardar el registro...!</div>");
 			}
 			
+		},
+		error: function(jqXHR, estado, error){
+		console.log(estado)
+		console.log(error)
+		},
+		complete: function (jqXHR, estado){
+			console.log(estado)
+		}		
+	});
+}
+function listar(){
+alert("registrar");
+var m = {"opc":5};
+$.ajax({
+		beforeSend: function(){
+			$('#resultado').html('Esperando...!');
+		},
+		data: m,
+		url: 'rc',
+		type: 'POST',
+		success: function(response){
+			$('#resultado1').html(response);
 		},
 		error: function(jqXHR, estado, error){
 		console.log(estado)

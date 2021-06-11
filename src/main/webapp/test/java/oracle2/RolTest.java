@@ -20,17 +20,18 @@ public class RolTest {
 	}
 	@Test
 	public void test() {
-		//	List<Rol> lista = rdo.readAll();
-			// System.out.println(lista.get(1).getIdrol());
-		//	assertEquals(214, lista.get(1).getIdrol());
-		//	assertEquals(1, rdo.create(new Rol("Finanzas", 1)));
-			//Rol r = new Rol();
-			//r.setIdrol(215);
-		//	r.setNomrol("Vendedor1");
-			//r.setEstado(0);
-		//	assertEquals(1, rdo.update(r));
+			//List<Rol> lista = rdo.readAll();
+			// System.out.println(lista.get(0).getNomrol());
+			//assertEquals("Finanzas", lista.get(0).getNomrol());
 			
-			assertEquals(1, rdo.delete(215));
+			//assertEquals(1, rdo.create(new Rol("Pokemon", 1)));
+			Rol r = new Rol();
+		    r.setIdrol(1);
+			r.setNomrol("Vendedor1");
+			r.setEstado(0);
+		     assertEquals(1, rdo.update(r));
+			
+		//	assertEquals(1, rdo.delete(215));
 	}
 
 }

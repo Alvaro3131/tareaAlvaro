@@ -1,34 +1,43 @@
 package pe.edu.upeu.oracle2.entity;
 
 public class Rol {
-private int idrol;
-private String nomrol;
-private int estado;
-public Rol() {
+	private int idalumno;
+	private String nombres;
+	private String telefono;
+	private String correo;
+	public int getIdalumno() {
+		return idalumno;
+	}
+	public void setIdalumno(int idalumno) {
+		this.idalumno = idalumno;
+	}
+	public String getNombres() {
+		return nombres;
+	}
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
+	}
+	public String getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	public String getCorreo() {
+		return correo;
+	}
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+	public Rol() {
 
-}
-public Rol(String nomrol, int estado) {
-	super();
-	this.nomrol = nomrol;
-	this.estado = estado;
-}
-public int getIdrol() {
-	return idrol;
-}
-public void setIdrol(int idrol) {
-	this.idrol = idrol;
-}
-public String getNomrol() {
-	return nomrol;
-}
-public void setNomrol(String nomrol) {
-	this.nomrol = nomrol;
-}
-public int getEstado() {
-	return estado;
-}
-public void setEstado(int estado) {
-	this.estado = estado;
-}
+	}
+	public Rol( String nombres, String telefono, String correo) {
+		this.nombres = nombres;
+		this.telefono = telefono;
+		this.correo = correo;
+	}
+	
+
 
 }
